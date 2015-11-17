@@ -14,8 +14,12 @@ namespace WinLog
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
+            if (System.Diagnostics.Process.GetProcessesByName(System.Diagnostics.Process.GetCurrentProcess().ProcessName).Length > 1)
+            {
+                MessageBox.Show("すでに起動しています");
+                return;
+            }
+
             Application.Run(new Form1());
         }
     }

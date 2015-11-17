@@ -233,7 +233,7 @@ namespace WinLog
             int s = this.Winlog.SystemStartUp();
             TimeSpan ts = new TimeSpan(0, 0, s);
             string hms = ts.ToString();
-            label1.Text = "パソコンを起動してから\n" + hms + "\nぐらい経過しまたよ";
+            label1.Text = "パソコンを起動してから\n" + hms + "\nぐらい経過しましたよ";
         }
 
         private void timer2_Tick(object sender, EventArgs e)
